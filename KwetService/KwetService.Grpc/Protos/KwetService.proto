@@ -1,0 +1,33 @@
+syntax = "proto3";
+option csharp_namespace = "KwetService.Grpc";
+
+service KwetService{
+  rpc CreateKwet (CreateKwetRequest) returns (KwetResponse);
+  rpc UpdateKwet (UpdateKwetRequest) returns (KwetResponse);
+  rpc DeleteKwet (DeleteKwetRequest) returns (DeleteKwetResponse);
+}
+
+message CreateKwetRequest {
+  int64 AccountId = 1;
+  string Content = 2;
+}
+
+message UpdateKwetRequest {
+  int64 id = 1;
+  int64 AccountId = 2;
+  string Content = 3;
+}
+
+message DeleteKwetRequest {
+  int64 id = 1;
+}
+
+message KwetResponse {
+  int64 id = 1;
+  int64 AccountId = 2;
+  string Content = 3;
+}
+
+message DeleteKwetResponse {
+  int64 id = 1;
+}
