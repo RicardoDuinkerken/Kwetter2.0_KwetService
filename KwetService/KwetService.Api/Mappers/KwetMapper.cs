@@ -9,7 +9,7 @@ public static class KwetMapper
     {
         return new()
         {
-            AccountId = request.AccountId,
+            Username = request.Username,
             Content = request.Content
         };
     }
@@ -19,7 +19,7 @@ public static class KwetMapper
         return new()
         {
             Id = request.Id,
-            AccountId = request.AccountId,
+            Username = request.Username,
             Content = request.Content
         };
     }
@@ -29,7 +29,7 @@ public static class KwetMapper
         return new()
         {
             Id = kwet.Id,
-            AccountId = kwet.AccountId,
+            Username = kwet.Username,
             Content = kwet.Content
         };
     }

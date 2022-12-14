@@ -3,6 +3,6 @@
 public class Kwet
 {
     public long Id { get; set; }
-    public long AccountId { get; set; }
+    public string Username { get; set; }
     public string Content { get; set; }
 }

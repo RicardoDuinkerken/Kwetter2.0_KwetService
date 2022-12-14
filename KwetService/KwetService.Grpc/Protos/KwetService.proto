@@ -8,13 +8,13 @@ service KwetService{
 }
 
 message CreateKwetRequest {
-  int64 AccountId = 1;
+  string username = 1;
   string Content = 2;
 }
 
 message UpdateKwetRequest {
   int64 id = 1;
-  int64 AccountId = 2;
+  string username = 2;
   string Content = 3;
 }
 
@@ -24,7 +24,7 @@ message DeleteKwetRequest {
 
 message KwetResponse {
   int64 id = 1;
-  int64 AccountId = 2;
+  string username = 2;
   string Content = 3;
 }
 
